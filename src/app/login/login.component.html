@@ -1,0 +1,99 @@
+<!--<mat-toolbar color="primary">
+  Login
+<span class="flex-spacer"></span>
+<button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+
+formControlName="email"
+<form novalidate #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <mat-dialog-content>
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Username" type="text" [(ngModel)]="user.username" name="username"  #username="ngModel" required>
+        <mat-error *ngIf="username.errors?.required">Username is required</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required>
+        <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-checkbox [(ngModel)]="user.remember" name="remember">Remember Me</mat-checkbox>
+    </p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <span class="flex-spacer"></span>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" *ngIf="loginForm.form.valid" mat-button class="background-primary text-floral-white" >Login</button>
+    <button type="submit" *ngIf="loginForm.form.invalid" mat-button  [disabled]="loginForm.form.invalid">Login</button>
+  </mat-dialog-actions>
+  <mat-dialog-content>
+    <p>need an account &nbsp;<a href="#">signup?</a></p>
+  </mat-dialog-content>
+</form>-->
+<div class="login-page">
+  <mat-toolbar color="primary">
+    Sign Up/Sign In
+  <span class="flex-spacer"></span>
+  <button mat-button mat-dialog-close>&times;</button>
+  </mat-toolbar>
+  <mat-card class="mat-elevation-z12">
+   
+    <mat-tab-group mat-stretc-tabs class="example-stretched-tabs">
+      <mat-tab label="Sign In">
+        <mat-card-content>
+          <form action=" ">
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
+              <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Password" type="password"  name="password" ngModel #password="ngModel" required>
+              <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+            <br>
+            <mat-checkbox>Remember Me!</mat-checkbox>
+            <button mat-raised-button color="primary" class="login-button" >Sign In</button>
+            
+          </form>
+        </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Sign Up">
+        <mat-card-content>
+          <form action=" ">
+            <mat-form-field>
+              <br>
+              <input matInput placeholder="User name" required name="username" ngModel #username="ngModel">
+              <mat-error *ngIf="username.invalid">Username is required</mat-error>
+              <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Email" required name="email" ngModel #email="ngModel">
+              <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Password" type="password" required minlength="6" name="password" ngModel #password="ngModel">
+              <mat-error *ngIf="password.errors.required">Password is required</mat-error>
+              
+              <mat-error *ngIf="password.errors.minlength">Password is must be of length 6</mat-error>
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+            <!--<mat-form-field>
+              <input matInput placeholder="Password" type="password" required minlength="6" name="repassword" ngModel #repassword="ngModel" [type]="hide ? 'password' : 'text'">
+              <mat-error *ngIf="repassword.errors.required">Re-Password is required</mat-error>
+              <mat-error *ngIf="repassword.errors.minlength">Re-Password is must be of length 6</mat-error>
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>-->
+            <button mat-raised-button color="primary" class="login-button" >Sign Up</button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>

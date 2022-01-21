@@ -1,0 +1,43 @@
+.logos{
+    width:450px;
+    height: 350px;
+    border-radius: 40px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,1);
+  
+}
+.spacer {
+    flex: 1 1 auto;
+  }
+.example-card {
+    max-width:380px;
+    margin-bottom: 8px;
+  }
+  h4{
+      font: 1em sans-serif;
+  }
+ h3{
+   font-family:Arial, Helvetica, sans-serif; 
+}
+.mat-card-md-image{
+  border-radius: 200px;
+}
+#details{
+  margin: 10px;
+}
+a{
+  text-decoration: none;
+}
+.content {
+  height: 500px;
+  width: 450px;
+  overflow: auto;
+}
+button{
+  
+  color: tomato;
+    box-shadow: 0 1px 8px rgba(0,0,0,1); 
+    border-radius: 20px;
+}

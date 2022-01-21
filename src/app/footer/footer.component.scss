@@ -1,0 +1,30 @@
+$lt-gray: #ddd;
+$background-dark: #512DA8;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-down $pad-left-right;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.651);
+    color: rgba(255, 255, 255, 0.849);
+    @include zero-margin(20px, 0px);
+}
+.id{
+    color: rgba(255, 255, 255, 0.986);
+      font-family:Georgia, 'Times New Roman', Times, serif;
+}
+a:hover{
+    background-color: #3167cc;
+    transform:translateY(-8px);
+  
+}
+.btn-facebook {color:#fff!important; background-color:#3b5998!important;}
+.btn-google-plus{color:rgb(95, 19, 19)!important;background-color:#d12c16!important;}
+.btn-youtube{color:#fff!important;background-color:#ff4b39!important;}
+.btn-linkedin{color:#fff!important;background-color:#007bb6!important;}
+.btn-twitter{color:#fff!important;background-color:#55acee!important;}
+.btn-mail{color:#fff!important;background-color:#512DA8!important;}
